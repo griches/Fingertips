@@ -179,15 +179,19 @@
 
 - (BOOL)anyScreenIsMirrored
 {
+	NSLog(@"\n\nStating check\n\n");
     if ( ! [UIScreen instancesRespondToSelector:@selector(mirroredScreen)])
         return NO;
 
     for (UIScreen *screen in [UIScreen screens])
     {
+		NSLog(@"\n\IN LOOP\n\n");
         if ([screen mirroredScreen] != nil)
+			NSLog(@"\n\nMIRROR\n\n");
             return YES;
     }
 
+	NSLog(@"\n\RETURN NO\n\n");
     return NO;
 }
 
