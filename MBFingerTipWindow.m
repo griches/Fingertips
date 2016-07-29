@@ -186,9 +186,10 @@
     for (UIScreen *screen in [UIScreen screens])
     {
 		NSLog(@"\n\IN LOOP\n\n");
-        if ([screen mirroredScreen] != nil)
+		if ([screen mirroredScreen] != nil) {
 			NSLog(@"\n\nMIRROR\n\n");
             return YES;
+		}
     }
 
 	NSLog(@"\n\RETURN NO\n\n");
